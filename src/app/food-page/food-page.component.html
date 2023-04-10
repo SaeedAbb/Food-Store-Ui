@@ -8,6 +8,7 @@
       <span class="favorite {{food.favorite ? '': 'not'}}">
         ❤
       </span>
+    </div>
       <div class="rating">
         <star-rating
           [value]="food.stars"
@@ -23,7 +24,7 @@
         </span>
       </div>
       <div class="tags">
-        <app-tags [foodPageTags]="food.tags"></app-tags>
+        <app-tags [foodPageTags]="food.tags" justifyContent="start"></app-tags>
       </div>
       <div class="cook-time"> <span>
         Time to cook about <strong>
@@ -34,6 +35,6 @@
         <span> {{food.price|currency}}</span>
       </div>
       <button>Add To cart</button>
-    </div>
+
   </div>
 </div>
