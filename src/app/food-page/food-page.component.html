@@ -9,32 +9,32 @@
         ❤
       </span>
     </div>
-      <div class="rating">
-        <star-rating
-          [value]="food.stars"
-          [totalstars]="5"
-          checkedcolor="red"
-          uncheckedcolor="black"
-          size="30px"
-          [readonly]="true"></star-rating>
-      </div>
-      <div class="origins">
+    <div class="rating">
+      <star-rating
+        [value]="food.stars"
+        [totalstars]="5"
+        checkedcolor="red"
+        uncheckedcolor="black"
+        size="30px"
+        [readonly]="true"></star-rating>
+    </div>
+    <div class="origins">
         <span *ngFor="let origing of food.origins">
           {{origing}}
         </span>
-      </div>
-      <div class="tags">
-        <app-tags [foodPageTags]="food.tags" justifyContent="start"></app-tags>
-      </div>
-      <div class="cook-time"> <span>
+    </div>
+    <div class="tags">
+      <app-tags [foodPageTags]="food.tags" justifyContent="start"></app-tags>
+    </div>
+    <div class="cook-time"> <span>
         Time to cook about <strong>
         {{food.cookTime}}
       </strong>
       </span></div>
-      <div class="price">
-        <span> {{food.price|currency}}</span>
-      </div>
-      <button>Add To cart</button>
+    <div class="price">
+      <span> {{food.price|currency}}</span>
+    </div>
+    <button (click)="addToCart()">Add To cart</button>
 
   </div>
 </div>
